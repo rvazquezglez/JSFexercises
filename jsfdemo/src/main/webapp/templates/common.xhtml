@@ -9,16 +9,14 @@
 <style type="text/css">
 @font-face {
 	font-family: myFirstFont;
-	src: url('css/fonts/Sansation_Light.ttf'), 
-	    url('css/fonts/Sansation_Light.eot')
-		format("opentype"); /* IE */
+	src: url('../css/fonts/Sansation_Light.ttf')
+		,url('../css/fonts/Sansation_Light.eot') format("opentype"); /* IE */
 }
 
 @font-face {
 	font-family: myFirstFont;
-	src: url('css/fonts/Sansation_Bold.ttf'), 
-	     url('css/fonts/Sansation_Bold.eot')
-		format("opentype"); /* IE */
+	src: url('../css/fonts/Sansation_Bold.ttf')
+		,url('../css/fonts/Sansation_Bold.eot') format("opentype"); /* IE */
 	font-weight: bold;
 }
 
@@ -39,11 +37,23 @@ body {
 	vertical-align: middle;
 	color: #8E969D;
 }
+.tablaPrincipal{
+	overflow:hidden;
+		border:1px solid #d3d3d3;
+		background:#fefefe;
+		width:70%;
+		margin:5% auto 0;
+		-moz-border-radius:10px; /* FF1+ */
+		-webkit-border-radius:10px; /* Saf3-4 */
+		border-radius:10px;
+		-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
 </style>
 </head>
 
 <body bgcolor="#ffffff">
-	<table style="border: 1px solid #CAD6E0" align="center" cellpadding="0"
+	<table class="tablaPrincipal" align="center" cellpadding="0"
 		cellspacing="0" border="0" width="400">
 		<tbody>
 
