@@ -3,13 +3,12 @@ package controllers;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
 
 import domain.classes.Usuario;
 
-@ManagedBean(name="userController")
+@ManagedBean(name="loginController")
 @RequestScoped
-public class UsuarioController {
+public class LoginController {
 	
 	@ManagedProperty(value="#{lguser}")
 	private Usuario usuario;
