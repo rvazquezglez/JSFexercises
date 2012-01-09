@@ -11,9 +11,62 @@
 	<ui:define name="pageHeader">Detalle</ui:define>
 
 	<ui:define name="body">
+		<h:form id="select">
+			<h:dataTable value="#{dataTableBean.arr}" var="loc">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Frameworks" />
+					</f:facet>
+					<h:outputText value="#{loc}" />
+				</h:column>
+			</h:dataTable>
+
+			<h:panelGrid>
+				<f:facet name="header">
+					<h:outputText value="Employee Details" />
+				</f:facet>
+				<h:dataTable value="#{dataTableBean.list}" var="loc">
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Employee No" />
+						</f:facet>
+						<h:outputText value="#{loc.empNo}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Employee Name" />
+						</f:facet>
+						<h:outputText value="#{loc.empName}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Employee Street" />
+						</f:facet>
+						<h:outputText value="#{loc.empAddress.street}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Employee City" />
+						</f:facet>
+						<h:outputText value="#{loc.empAddress.city}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Employee Country" />
+						</f:facet>
+						<h:outputText value="#{loc.empAddress.country}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Employee PinCode" />
+						</f:facet>
+						<h:outputText value="#{loc.empAddress.pincode}" />
+					</h:column>
+				</h:dataTable>
+			</h:panelGrid>
+		</h:form>
 		<h:form>
-			<h:commandButton value="Home"
-							action="#{loginController.verHome()}" />
+			<h:commandButton value="Home" action="#{bookController.verHome()}" />
 			<h:commandButton value="Salir" action="#{loginController.verLogin()}" />
 		</h:form>
 	</ui:define>

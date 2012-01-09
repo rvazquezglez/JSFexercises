@@ -22,12 +22,6 @@ public class LoginController {
 		}
 	}
 	
-	public String verDetalle(){
-		return "bookDetail";
-	}
-	public String verHome(){
-		return "home";
-	}
 	public String verLogin(){
 		return "login";
 	}
